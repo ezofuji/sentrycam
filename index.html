@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentry Camera Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Tesla Sentry Camera Viewer</h2>
+    <button id="selectFolderButton">Select Folder</button>
+    <button id="playPauseButton">Pause</button>
+    <select id="setSelect">
+      <option value="" disabled selected>Select Set</option>
+    </select>
+  </div>
+ 
+  <div id="progressBarContainer" class="progress-bar-container">
+    <div id="progressBar" class="progress-bar"></div>
+  </div>
+
+  <div class="video-container">
+    <div class="video-wrapper">
+      <div class="video-title">Front</div>
+      <video id="frontVideo" autoplay></video>
+      <div id="frontTimestamp" class="timestamp">-</div>
+    </div>
+    <div class="video-wrapper">
+      <div class="video-title">Back</div>
+      <video id="backVideo" autoplay></video>
+      <div id="backTimestamp" class="timestamp">-</div>
+    </div>
+    <div class="video-wrapper">
+      <div class="video-title">Left</div>
+      <video id="leftVideo" autoplay></video>
+      <div id="leftTimestamp" class="timestamp">-</div>
+    </div>
+    <div class="video-wrapper">
+      <div class="video-title">Right</div>
+      <video id="rightVideo" autoplay></video>
+      <div id="rightTimestamp" class="timestamp">-</div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
